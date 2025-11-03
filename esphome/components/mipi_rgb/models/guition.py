@@ -14,6 +14,12 @@ st7701s.extend(
     pixel_mode="18bit",
     mirror_x=False,
     mirror_y=False,
+    hsync_pulse_width=8,
+    hsync_front_porch=10,
+    hsync_back_porch=20,
+    vsync_pulse_width=8,
+    vsync_front_porch=10,
+    vsync_back_porch=10,
     data_pins={
         "red": [11, 12, 13, 14, 0],
         "green": [8, 20, 3, 46, 9, 10],
