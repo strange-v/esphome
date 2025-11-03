@@ -12,16 +12,13 @@ st7701s.extend(
     pclk_pin=21,
     pclk_frequency="12MHz",
     pixel_mode="18bit",
-    mirror_x=True,
-    mirror_y=True,
+    mirror_x=False,
+    mirror_y=False,
     data_pins={
         "red": [11, 12, 13, 14, 0],
         "green": [8, 20, 3, 46, 9, 10],
         "blue": [4, 5, 6, 7, 15],
     },
     # Additional configuration for Guition 4848S040, 16 bit bus config
-    add_init_sequence=(
-        (0x3A, 0x60),
-        (0xCD, 0x00),
-    ),
+    add_init_sequence=((0xCD, 0x00),),
 )
